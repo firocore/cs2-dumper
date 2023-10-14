@@ -38,5 +38,5 @@ class Memory:
         return self.process.raw_pattern_scan(base_address, end_address, pattern, True)
     
     def resolve_rip(self, address: int):
-        displacement = self.process.read_int(address + 0x3)
+        displacement: int = self.process.read_int(address + 0x3)
         return (address + 0x7) + displacement

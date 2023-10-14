@@ -158,14 +158,6 @@ def virtual_alloc_ex(process_handle: int, bytes_length: int) -> int:
         return allocation_address
 
 
-def virtual_query_ex(process_handle: int, address: int) -> object:
-    """Возвращает объект MEMORY_BASIC_INFORMATION, содержащий информацию о регионе памяти по адресу."""
-
-    memory_information = MEMORY_BASIC_INFORMATION()
-    ctypes.windll.kernel32.VirtualQueryEx(process_handle, ctypes.cast(address, ctypes.c_char_p), ctypes.byref(memory_information), ctypes.sizeof(memory_information))
-    return memory_information
-
-
 class MemoryAPIException(Exception):
     """Базовый класс ошибок MemoryAPI."""
     pass
@@ -352,6 +344,14 @@ class Process:
         if process_name and pid:
             raise MemoryAPIException("Класс принимает в конструктор только process_name или только pid.")
 
+    def virtual_query_ex(self, address: int) -> MEMORY_BASIC_INFORMATION:
+        """Возвращает объект MEMORY_BASIC_INFORMATION, содержащий информацию о регионе памяти по адресу."""
+
+        memory_information = MEMORY_BASIC_INFORMATION()
+        ctypes.windll.kernel32.VirtualQueryEx(self.handle, ctypes.cast(address, ctypes.c_char_p), ctypes.byref(memory_information), ctypes.sizeof(memory_information))
+        return memory_information
+
+    
     def get_module_info(self, module_name: str) -> MODULE:
         """Возвращает объект MODULE, содержащий информацию о модуле."""
 
@@ -403,7 +403,7 @@ class Process:
         self.__scan_sections = []
         allowed_protections = [PAGE_EXECUTE_READ, PAGE_EXECUTE_READWRITE, PAGE_READWRITE, PAGE_READONLY]
         while scan_region < end_address:
-            memory_region_information = virtual_query_ex(self.handle, scan_region)
+            memory_region_information = self.virtual_query_ex(scan_region)
             scan_region = memory_region_information.BaseAddress + memory_region_information.RegionSize
             if not (memory_region_information.State != MEM_COMMIT or memory_region_information.Protect not in allowed_protections):
                 self.__scan_sections.append((memory_region_information.BaseAddress, memory_region_information.RegionSize))
@@ -446,7 +446,7 @@ class Process:
         self.__scan_sections = []
         allowed_protections = [PAGE_EXECUTE_READ, PAGE_EXECUTE_READWRITE, PAGE_READWRITE, PAGE_READONLY]
         while scan_region < end_address:
-            memory_region_information = virtual_query_ex(self.handle, scan_region)
+            memory_region_information = self.virtual_query_ex(scan_region)
             scan_region = memory_region_information.BaseAddress + memory_region_information.RegionSize
             if not (memory_region_information.State != MEM_COMMIT or memory_region_information.Protect not in allowed_protections):
                 self.__scan_sections.append((memory_region_information.BaseAddress, memory_region_information.RegionSize))
@@ -483,10 +483,13 @@ class Process:
         buffer = ctypes.create_string_buffer(length)
         bytes_read = ctypes.c_size_t()
         ctypes.windll.kernel32.ReadProcessMemory(self.handle, ctypes.c_void_p(address), ctypes.byref(buffer), length, ctypes.byref(bytes_read))
-        decode = buffer.value.decode()
-        if decode:
-            return decode
-        else:
+        try:
+            decode = buffer.value.decode()
+            if decode:
+                return decode
+            else:
+                return None
+        except UnicodeDecodeError:
             return None
 
     def read_short(self, address: int) -> int:

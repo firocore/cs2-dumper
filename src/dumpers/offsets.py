@@ -4,7 +4,7 @@ from memory.memory import Memory
 
 
 def dump_offsets(memory: Memory):
-    with open("config.json", "r") as file:
+    with open("signatures.json", "r") as file:
         config: dict = json.load(file)
         file.close()
 
@@ -43,4 +43,4 @@ def dump_offsets(memory: Memory):
         else:
             value = int(address) - module.BaseAddress
 
-        print(f"{name}, {value}")
+        print(f"{name}, {hex(value)}")
