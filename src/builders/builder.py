@@ -1,5 +1,6 @@
 import builders.json_file
 import builders.ccp_file
+import builders.csharp_file
 import os
 import shutil
 #import .cpp
@@ -26,3 +27,4 @@ class Builder(object):
     def add_class(self, module_name: str, class_name: str, fields: list):
         builders.json_file.add_module_fields(module_name, class_name, fields)
         builders.ccp_file.add_module_fields(module_name, class_name, fields)
+        builders.csharp_file.add_module_fields(module_name, class_name, fields)
