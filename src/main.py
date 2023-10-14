@@ -1,8 +1,9 @@
-import os
-import sys
 from memory.memory import Memory
 from dumpers.offsets import dump_offsets
 from dumpers.schemas import dump_schemas
+
+
+import shutil
 
 def main():
     memory = Memory()

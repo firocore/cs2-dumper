@@ -2,7 +2,7 @@ from memory.memory import Memory
 
 class Field:
     def __init__(self, name, offset) -> None:
-        self.neme = name
+        self.name = name
         self.offset = offset
 
 class Fields:
