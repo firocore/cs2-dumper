@@ -35,7 +35,6 @@ def dump_offsets(memory: Memory):
                 for _ in range(times):
                     address = memory.process.read_uint(address)
                     
-            
             elif operation_type == "offset":
                 offset = memory.process.read_int(address + operation['position'])
 

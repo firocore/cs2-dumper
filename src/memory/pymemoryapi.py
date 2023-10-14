@@ -352,7 +352,7 @@ class Process:
         if process_name and pid:
             raise MemoryAPIException("Класс принимает в конструктор только process_name или только pid.")
 
-    def get_module_info(self, module_name: str) -> object:
+    def get_module_info(self, module_name: str) -> MODULE:
         """Возвращает объект MODULE, содержащий информацию о модуле."""
 
         hModules = (ctypes.c_void_p * 1024)()

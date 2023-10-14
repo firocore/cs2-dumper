@@ -1,7 +1,7 @@
 {
     "signatures": [
         {
-            "name": "entityList",
+            "name": "dwEntityList",
             "module": "client.dll",
             "pattern": "48 8B 0D ?? ?? ?? ?? 48 89 7C 24 ?? 8B FA C1 EB",
             "operations": [
@@ -11,7 +11,7 @@
             ]
         },
         {
-            "name": "globalVars",
+            "name": "dwGlobalVars",
             "module": "client.dll",
             "pattern": "48 89 0D ?? ?? ?? ?? 48 89 41",
             "operations": [
@@ -21,7 +21,7 @@
             ]
         },
         {
-            "name": "interfaceLinkList",
+            "name": "dwInterfaceLinkList",
             "module": "client.dll",
             "pattern": "4C 8B 0D ?? ?? ?? ?? 4C 8B D2 4C 8B D9",
             "operations": [
@@ -31,7 +31,7 @@
             ]
         },
         {
-            "name": "localPlayerController",
+            "name": "dwLocalPlayerController",
             "module": "client.dll",
             "pattern": "48 8B 05 ?? ?? ?? ?? 48 85 C0 74 4F",
             "operations": [
@@ -41,7 +41,7 @@
             ]
         },
         {
-            "name": "localPlayerPawn",
+            "name": "dwLocalPlayerPawn",
             "module": "client.dll",
             "pattern": "48 8D 05 ?? ?? ?? ?? C3 CC CC CC CC CC CC CC CC 48 83 EC ?? 8B 0D",
             "operations": [
@@ -55,7 +55,7 @@
             ]
         },
         {
-            "name": "networkGameClient",
+            "name": "dwNetworkGameClient",
             "module": "engine2.dll",
             "pattern": "48 89 3D ?? ?? ?? ?? 48 8D 15",
             "operations": [
