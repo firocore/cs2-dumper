@@ -7,7 +7,7 @@ import shutil
 #import hueta
 
 class Builder(object):
-    def __init__(self) -> None:
+    def create_output(self) -> None:
         try:
             shutil.rmtree("output")
         except FileNotFoundError:

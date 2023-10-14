@@ -1,0 +1,13 @@
+{
+    "Offsets": {
+        "dwEntityList": 24706184,
+        "dwGlobalVars": 23670504,
+        "dwInterfaceLinkList": 26698040,
+        "dwLocalPlayerController": 25027848,
+        "dwLocalPlayerPawn": 25677768,
+        "dwNetworkGameClient": 4745904,
+        "networkGameClient_signOnState": 576,
+        "viewAngles": 23800768,
+        "viewMatrix": 25680560
+    }
+}

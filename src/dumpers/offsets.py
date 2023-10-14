@@ -1,12 +1,19 @@
 import json
 from memory.memory import Memory
+from builders.builder import Builder
+from schemas.schema_fields import Field
 
 
 
 def dump_offsets(memory: Memory):
-    with open("signatures.json", "r") as file:
+    
+
+    with open("../signatures.json", "r") as file:
         config: dict = json.load(file)
         file.close()
+
+    builder = Builder()
+    output_filds = []
 
     for signature in config.get("signatures"):
         name = signature.get("name")
@@ -17,7 +24,6 @@ def dump_offsets(memory: Memory):
         if name is None or module is None or pattern is None:
             continue
 
-        
         address = memory.find_pattern(module, pattern)
         module = memory.get_module(module)
 
@@ -42,5 +48,9 @@ def dump_offsets(memory: Memory):
             value = offset
         else:
             value = int(address) - module.BaseAddress
-
+        
+        output_filds.append(Field(name, value))
         print(f"{name}, {hex(value)}")
+    
+    builder.create_file("offsets")
+    builder.add_class("offsets", "Offsets", output_filds)
