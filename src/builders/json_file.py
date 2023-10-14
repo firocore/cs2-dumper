@@ -4,7 +4,7 @@ from schemas.schema_fields import Field
 
 
 
-def add_class(module_name,  class_name: str, fields: Field):
+def add_module_fields(module_name: str,  class_name: str, fields: list[Field]) -> None:
     with open(f'json/{module_name}.json', 'a+') as f:
         f.seek(0)
 

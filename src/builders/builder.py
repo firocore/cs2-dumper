@@ -1,12 +1,14 @@
 import builders.json_file
+import builders.ccp_file
 import os
+import shutil
 #import .cpp
 #import hueta
 
 class Builder(object):
     def __init__(self) -> None:
         try:
-            os.remove("output")
+            shutil.rmtree("output")
         except FileNotFoundError:
             ...
         finally:
@@ -19,9 +21,8 @@ class Builder(object):
 
 
     def create_file(self, filename):
-        builders.json_file.create_module_file(filename)
-
+        builders.ccp_file.create_module_file(filename)
 
     def add_class(self, module_name: str, class_name: str, fields: list):
-        builders.json_file.add_class(module_name, class_name, fields)
-
+        builders.json_file.add_module_fields(module_name, class_name, fields)
+        builders.ccp_file.add_module_fields(module_name, class_name, fields)

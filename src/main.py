@@ -10,7 +10,6 @@ def main():
     memory.attach_process("cs2.exe")
 
     dump_schemas(memory)
-
     # dump_offsets(memory)
 
 if __name__ == "__main__":

@@ -14,8 +14,8 @@ def dump_schemas(memory: Memory):
         # print(f"{type_scope.get_module_name()} | {hex(type_scope.address)}")
 
         # Тут создавать файл
-        module_name = type_scope.get_module_name()
-        # builder.create_file(module_name)
+        module_name = type_scope.get_module_name()[:-4]
+        builder.create_file(module_name)
 
         for classes in type_scope.get_classes():
             class_name = classes.get_class_name()
@@ -24,7 +24,7 @@ def dump_schemas(memory: Memory):
             
             if size == 0: continue
             classes_fields = Fields(memory, classes.address).get_class_fields(size)
-            builder.add_class(module_name[:-4], class_name, classes_fields)
+            builder.add_class(module_name, class_name, classes_fields)
 
         # break
         # break

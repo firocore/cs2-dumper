@@ -3,11 +3,9 @@
         "m_BuoyancyHelper": 3272,
         "m_flFluidDensity": 3304
     },
-    
     "CFuncWater": {
         "m_BuoyancyHelper": 3264
     },
-
     "CCSPlayerController": {
         "m_pInGameMoneyServices": 1744,
         "m_pInventoryServices": 1752,
