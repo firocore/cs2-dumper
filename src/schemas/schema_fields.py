@@ -2,8 +2,8 @@ from memory.memory import Memory
 
 class Field:
     def __init__(self, name, offset) -> None:
-        self.name = name
-        self.offset = offset
+        self.name: str = name
+        self.offset: int = offset
 
 class Fields:
     def __init__(self, memory: Memory, address: int) -> None:

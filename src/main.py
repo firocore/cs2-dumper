@@ -4,7 +4,6 @@ from dumpers.schemas import dump_schemas
 from builders.builder import Builder
 
 
-import shutil
 
 def main():
     Builder().create_output()

@@ -1,6 +1,7 @@
 import builders.json_file
 import builders.ccp_file
 import builders.csharp_file
+import builders.py_file
 import os
 import shutil
 #import .cpp
@@ -19,6 +20,7 @@ class Builder(object):
         os.mkdir("json")
         os.mkdir("csharp")
         os.mkdir("cpp")
+        os.mkdir("py")
 
 
     def create_file(self, filename):
@@ -28,3 +30,4 @@ class Builder(object):
         builders.json_file.add_module_fields(module_name, class_name, fields)
         builders.ccp_file.add_module_fields(module_name, class_name, fields)
         builders.csharp_file.add_module_fields(module_name, class_name, fields)
+        builders.py_file.add_module_fields(module_name, class_name, fields)
