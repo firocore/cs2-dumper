@@ -6,10 +6,11 @@ from builders.builder import Builder
 
 
 def main():
-    Builder().create_output()
+    
     memory = Memory()
     memory.attach_process("cs2.exe")
-
+    Builder().create_output()
+    
     dump_offsets(memory)
     dump_schemas(memory)
 

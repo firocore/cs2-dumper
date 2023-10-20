@@ -4,12 +4,12 @@
 
 class Offsets:
 
-   dwEntityList: int = 24706184
-   dwGlobalVars: int = 23670504
-   dwInterfaceLinkList: int = 26698040
-   dwLocalPlayerController: int = 25027848
-   dwLocalPlayerPawn: int = 25677768
+   dwEntityList: int = 24731336
+   dwGlobalVars: int = 23695168
+   dwInterfaceLinkList: int = 26724920
+   dwLocalPlayerController: int = 25053416
+   dwLocalPlayerPawn: int = 25703336
    dwNetworkGameClient: int = 4745904
    networkGameClient_signOnState: int = 576
-   viewAngles: int = 23800768
-   viewMatrix: int = 25680560
+   viewAngles: int = 23825360
+   viewMatrix: int = 25706128

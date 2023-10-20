@@ -564,12 +564,8 @@ namespace CPlayerSprayDecal {
 
 namespace CInferno {
 
-   constexpr ptrdiff_t m_fireXDelta = 0x710;
-   constexpr ptrdiff_t m_fireYDelta = 0x810;
-   constexpr ptrdiff_t m_fireZDelta = 0x910;
-   constexpr ptrdiff_t m_fireParentXDelta = 0xa10;
-   constexpr ptrdiff_t m_fireParentYDelta = 0xb10;
-   constexpr ptrdiff_t m_fireParentZDelta = 0xc10;
+   constexpr ptrdiff_t m_firePositions = 0x710;
+   constexpr ptrdiff_t m_fireParentPositions = 0xa10;
    constexpr ptrdiff_t m_bFireIsBurning = 0xd10;
    constexpr ptrdiff_t m_BurnNormal = 0xd50;
    constexpr ptrdiff_t m_fireCount = 0x1050;
@@ -1989,75 +1985,75 @@ namespace CCSWeaponBase {
    constexpr ptrdiff_t m_flTimeSilencerSwitchComplete = 0xd54;
    constexpr ptrdiff_t m_iOriginalTeamNumber = 0xd58;
    constexpr ptrdiff_t m_flNextAttackRenderTimeOffset = 0xd5c;
-   constexpr ptrdiff_t m_bCanBePickedUp = 0xd68;
-   constexpr ptrdiff_t m_bUseCanOverrideNextOwnerTouchTime = 0xd69;
-   constexpr ptrdiff_t m_nextOwnerTouchTime = 0xd6c;
-   constexpr ptrdiff_t m_nextPrevOwnerTouchTime = 0xd70;
-   constexpr ptrdiff_t m_hPrevOwner = 0xd74;
-   constexpr ptrdiff_t m_nDropTick = 0xd78;
-   constexpr ptrdiff_t m_donated = 0xd9c;
-   constexpr ptrdiff_t m_fLastShotTime = 0xda0;
-   constexpr ptrdiff_t m_bWasOwnedByCT = 0xda4;
-   constexpr ptrdiff_t m_bWasOwnedByTerrorist = 0xda5;
-   constexpr ptrdiff_t m_bFiredOutOfAmmoEvent = 0xda6;
-   constexpr ptrdiff_t m_numRemoveUnownedWeaponThink = 0xda8;
-   constexpr ptrdiff_t m_IronSightController = 0xdb0;
-   constexpr ptrdiff_t m_iIronSightMode = 0xdc8;
-   constexpr ptrdiff_t m_flLastLOSTraceFailureTime = 0xdcc;
-   constexpr ptrdiff_t m_iNumEmptyAttacks = 0xdd0;
+   constexpr ptrdiff_t m_bCanBePickedUp = 0xd70;
+   constexpr ptrdiff_t m_bUseCanOverrideNextOwnerTouchTime = 0xd71;
+   constexpr ptrdiff_t m_nextOwnerTouchTime = 0xd74;
+   constexpr ptrdiff_t m_nextPrevOwnerTouchTime = 0xd78;
+   constexpr ptrdiff_t m_hPrevOwner = 0xd7c;
+   constexpr ptrdiff_t m_nDropTick = 0xd80;
+   constexpr ptrdiff_t m_donated = 0xda4;
+   constexpr ptrdiff_t m_fLastShotTime = 0xda8;
+   constexpr ptrdiff_t m_bWasOwnedByCT = 0xdac;
+   constexpr ptrdiff_t m_bWasOwnedByTerrorist = 0xdad;
+   constexpr ptrdiff_t m_bFiredOutOfAmmoEvent = 0xdae;
+   constexpr ptrdiff_t m_numRemoveUnownedWeaponThink = 0xdb0;
+   constexpr ptrdiff_t m_IronSightController = 0xdb8;
+   constexpr ptrdiff_t m_iIronSightMode = 0xdd0;
+   constexpr ptrdiff_t m_flLastLOSTraceFailureTime = 0xdd4;
+   constexpr ptrdiff_t m_iNumEmptyAttacks = 0xdd8;
 
 }
 
 namespace CCSWeaponBaseGun {
 
-   constexpr ptrdiff_t m_zoomLevel = 0xdd8;
-   constexpr ptrdiff_t m_iBurstShotsRemaining = 0xddc;
-   constexpr ptrdiff_t m_silencedModelIndex = 0xde8;
-   constexpr ptrdiff_t m_inPrecache = 0xdec;
-   constexpr ptrdiff_t m_bNeedsBoltAction = 0xded;
-   constexpr ptrdiff_t m_bSkillReloadAvailable = 0xdee;
-   constexpr ptrdiff_t m_bSkillReloadLiftedReloadKey = 0xdef;
-   constexpr ptrdiff_t m_bSkillBoltInterruptAvailable = 0xdf0;
-   constexpr ptrdiff_t m_bSkillBoltLiftedFireKey = 0xdf1;
+   constexpr ptrdiff_t m_zoomLevel = 0xde0;
+   constexpr ptrdiff_t m_iBurstShotsRemaining = 0xde4;
+   constexpr ptrdiff_t m_silencedModelIndex = 0xdf0;
+   constexpr ptrdiff_t m_inPrecache = 0xdf4;
+   constexpr ptrdiff_t m_bNeedsBoltAction = 0xdf5;
+   constexpr ptrdiff_t m_bSkillReloadAvailable = 0xdf6;
+   constexpr ptrdiff_t m_bSkillReloadLiftedReloadKey = 0xdf7;
+   constexpr ptrdiff_t m_bSkillBoltInterruptAvailable = 0xdf8;
+   constexpr ptrdiff_t m_bSkillBoltLiftedFireKey = 0xdf9;
 
 }
 
 namespace CC4 {
 
-   constexpr ptrdiff_t m_vecLastValidPlayerHeldPosition = 0xdd8;
-   constexpr ptrdiff_t m_vecLastValidDroppedPosition = 0xde4;
-   constexpr ptrdiff_t m_bDoValidDroppedPositionCheck = 0xdf0;
-   constexpr ptrdiff_t m_bStartedArming = 0xdf1;
-   constexpr ptrdiff_t m_fArmedTime = 0xdf4;
-   constexpr ptrdiff_t m_bBombPlacedAnimation = 0xdf8;
-   constexpr ptrdiff_t m_bIsPlantingViaUse = 0xdf9;
-   constexpr ptrdiff_t m_entitySpottedState = 0xe00;
-   constexpr ptrdiff_t m_nSpotRules = 0xe18;
-   constexpr ptrdiff_t m_bPlayedArmingBeeps = 0xe1c;
-   constexpr ptrdiff_t m_bBombPlanted = 0xe23;
-   constexpr ptrdiff_t m_bDroppedFromDeath = 0xe24;
+   constexpr ptrdiff_t m_vecLastValidPlayerHeldPosition = 0xde0;
+   constexpr ptrdiff_t m_vecLastValidDroppedPosition = 0xdec;
+   constexpr ptrdiff_t m_bDoValidDroppedPositionCheck = 0xdf8;
+   constexpr ptrdiff_t m_bStartedArming = 0xdf9;
+   constexpr ptrdiff_t m_fArmedTime = 0xdfc;
+   constexpr ptrdiff_t m_bBombPlacedAnimation = 0xe00;
+   constexpr ptrdiff_t m_bIsPlantingViaUse = 0xe01;
+   constexpr ptrdiff_t m_entitySpottedState = 0xe08;
+   constexpr ptrdiff_t m_nSpotRules = 0xe20;
+   constexpr ptrdiff_t m_bPlayedArmingBeeps = 0xe24;
+   constexpr ptrdiff_t m_bBombPlanted = 0xe2b;
+   constexpr ptrdiff_t m_bDroppedFromDeath = 0xe2c;
 
 }
 
 namespace CWeaponTaser {
 
-   constexpr ptrdiff_t m_fFireTime = 0xdf8;
+   constexpr ptrdiff_t m_fFireTime = 0xe00;
 
 }
 
 namespace CMelee {
 
-   constexpr ptrdiff_t m_flThrowAt = 0xdd8;
-   constexpr ptrdiff_t m_hThrower = 0xddc;
-   constexpr ptrdiff_t m_bDidThrowDamage = 0xde0;
+   constexpr ptrdiff_t m_flThrowAt = 0xde0;
+   constexpr ptrdiff_t m_hThrower = 0xde4;
+   constexpr ptrdiff_t m_bDidThrowDamage = 0xde8;
 
 }
 
 namespace CWeaponShield {
 
-   constexpr ptrdiff_t m_flBulletDamageAbsorbed = 0xdf8;
-   constexpr ptrdiff_t m_flLastBulletHitSoundTime = 0xdfc;
-   constexpr ptrdiff_t m_flDisplayHealth = 0xe00;
+   constexpr ptrdiff_t m_flBulletDamageAbsorbed = 0xe00;
+   constexpr ptrdiff_t m_flLastBulletHitSoundTime = 0xe04;
+   constexpr ptrdiff_t m_flDisplayHealth = 0xe08;
 
 }
 
@@ -2093,34 +2089,34 @@ namespace CSmokeGrenadeProjectile {
 
 namespace CBaseCSGrenade {
 
-   constexpr ptrdiff_t m_bRedraw = 0xdf8;
-   constexpr ptrdiff_t m_bIsHeldByPlayer = 0xdf9;
-   constexpr ptrdiff_t m_bPinPulled = 0xdfa;
-   constexpr ptrdiff_t m_bJumpThrow = 0xdfb;
-   constexpr ptrdiff_t m_eThrowStatus = 0xdfc;
-   constexpr ptrdiff_t m_fThrowTime = 0xe00;
-   constexpr ptrdiff_t m_flThrowStrength = 0xe04;
-   constexpr ptrdiff_t m_flThrowStrengthApproach = 0xe08;
-   constexpr ptrdiff_t m_fDropTime = 0xe0c;
+   constexpr ptrdiff_t m_bRedraw = 0xe00;
+   constexpr ptrdiff_t m_bIsHeldByPlayer = 0xe01;
+   constexpr ptrdiff_t m_bPinPulled = 0xe02;
+   constexpr ptrdiff_t m_bJumpThrow = 0xe03;
+   constexpr ptrdiff_t m_eThrowStatus = 0xe04;
+   constexpr ptrdiff_t m_fThrowTime = 0xe08;
+   constexpr ptrdiff_t m_flThrowStrength = 0xe0c;
+   constexpr ptrdiff_t m_flThrowStrengthApproach = 0xe10;
+   constexpr ptrdiff_t m_fDropTime = 0xe14;
 
 }
 
 namespace CWeaponBaseItem {
 
-   constexpr ptrdiff_t m_SequenceCompleteTimer = 0xdd8;
-   constexpr ptrdiff_t m_bRedraw = 0xdf0;
+   constexpr ptrdiff_t m_SequenceCompleteTimer = 0xde0;
+   constexpr ptrdiff_t m_bRedraw = 0xdf8;
 
 }
 
 namespace CFists {
 
-   constexpr ptrdiff_t m_bPlayingUninterruptableAct = 0xdd8;
-   constexpr ptrdiff_t m_nUninterruptableActivity = 0xddc;
-   constexpr ptrdiff_t m_bRestorePrevWep = 0xde0;
-   constexpr ptrdiff_t m_hWeaponBeforePrevious = 0xde4;
-   constexpr ptrdiff_t m_hWeaponPrevious = 0xde8;
-   constexpr ptrdiff_t m_bDelayedHardPunchIncoming = 0xdec;
-   constexpr ptrdiff_t m_bDestroyAfterTaunt = 0xded;
+   constexpr ptrdiff_t m_bPlayingUninterruptableAct = 0xde0;
+   constexpr ptrdiff_t m_nUninterruptableActivity = 0xde4;
+   constexpr ptrdiff_t m_bRestorePrevWep = 0xde8;
+   constexpr ptrdiff_t m_hWeaponBeforePrevious = 0xdec;
+   constexpr ptrdiff_t m_hWeaponPrevious = 0xdf0;
+   constexpr ptrdiff_t m_bDelayedHardPunchIncoming = 0xdf4;
+   constexpr ptrdiff_t m_bDestroyAfterTaunt = 0xdf5;
 
 }
 
@@ -2155,68 +2151,67 @@ namespace CCSPlayerPawnBase {
    constexpr ptrdiff_t m_iBlockingUseActionInProgress = 0xcfc;
    constexpr ptrdiff_t m_fImmuneToGunGameDamageTime = 0xd00;
    constexpr ptrdiff_t m_bGunGameImmunity = 0xd04;
-   constexpr ptrdiff_t m_unTotalRoundDamageDealt = 0xd08;
-   constexpr ptrdiff_t m_fMolotovDamageTime = 0xd0c;
-   constexpr ptrdiff_t m_bHasMovedSinceSpawn = 0xd10;
-   constexpr ptrdiff_t m_bCanMoveDuringFreezePeriod = 0xd11;
-   constexpr ptrdiff_t m_flGuardianTooFarDistFrac = 0xd14;
-   constexpr ptrdiff_t m_flNextGuardianTooFarHurtTime = 0xd18;
-   constexpr ptrdiff_t m_flDetectedByEnemySensorTime = 0xd1c;
-   constexpr ptrdiff_t m_flDealtDamageToEnemyMostRecentTimestamp = 0xd20;
-   constexpr ptrdiff_t m_flLastEquippedHelmetTime = 0xd24;
-   constexpr ptrdiff_t m_flLastEquippedArmorTime = 0xd28;
-   constexpr ptrdiff_t m_nHeavyAssaultSuitCooldownRemaining = 0xd2c;
-   constexpr ptrdiff_t m_bResetArmorNextSpawn = 0xd30;
-   constexpr ptrdiff_t m_flLastBumpMineBumpTime = 0xd34;
-   constexpr ptrdiff_t m_flEmitSoundTime = 0xd38;
-   constexpr ptrdiff_t m_iNumSpawns = 0xd3c;
-   constexpr ptrdiff_t m_iShouldHaveCash = 0xd40;
-   constexpr ptrdiff_t m_bInvalidSteamLogonDelayed = 0xd44;
-   constexpr ptrdiff_t m_flLastAction = 0xd48;
-   constexpr ptrdiff_t m_flNameChangeHistory = 0xd4c;
-   constexpr ptrdiff_t m_fLastGivenDefuserTime = 0xd60;
-   constexpr ptrdiff_t m_fLastGivenBombTime = 0xd64;
-   constexpr ptrdiff_t m_bHasNightVision = 0xd68;
-   constexpr ptrdiff_t m_bNightVisionOn = 0xd69;
-   constexpr ptrdiff_t m_fNextRadarUpdateTime = 0xd6c;
-   constexpr ptrdiff_t m_flLastMoneyUpdateTime = 0xd70;
-   constexpr ptrdiff_t m_MenuStringBuffer = 0xd74;
-   constexpr ptrdiff_t m_fIntroCamTime = 0x1174;
-   constexpr ptrdiff_t m_nMyCollisionGroup = 0x1178;
-   constexpr ptrdiff_t m_bInNoDefuseArea = 0x117c;
-   constexpr ptrdiff_t m_bKilledByTaser = 0x117d;
-   constexpr ptrdiff_t m_iMoveState = 0x1180;
-   constexpr ptrdiff_t m_grenadeParameterStashTime = 0x1184;
-   constexpr ptrdiff_t m_bGrenadeParametersStashed = 0x1188;
-   constexpr ptrdiff_t m_angStashedShootAngles = 0x118c;
-   constexpr ptrdiff_t m_vecStashedGrenadeThrowPosition = 0x1198;
-   constexpr ptrdiff_t m_vecStashedVelocity = 0x11a4;
-   constexpr ptrdiff_t m_angShootAngleHistory = 0x11b0;
-   constexpr ptrdiff_t m_vecThrowPositionHistory = 0x11c8;
-   constexpr ptrdiff_t m_vecVelocityHistory = 0x11e0;
-   constexpr ptrdiff_t m_bDiedAirborne = 0x11f8;
-   constexpr ptrdiff_t m_iBombSiteIndex = 0x11fc;
-   constexpr ptrdiff_t m_nWhichBombZone = 0x1200;
-   constexpr ptrdiff_t m_bInBombZoneTrigger = 0x1204;
-   constexpr ptrdiff_t m_bWasInBombZoneTrigger = 0x1205;
-   constexpr ptrdiff_t m_iDirection = 0x1208;
-   constexpr ptrdiff_t m_iShotsFired = 0x120c;
-   constexpr ptrdiff_t m_ArmorValue = 0x1210;
-   constexpr ptrdiff_t m_flFlinchStack = 0x1214;
-   constexpr ptrdiff_t m_flVelocityModifier = 0x1218;
-   constexpr ptrdiff_t m_flHitHeading = 0x121c;
-   constexpr ptrdiff_t m_nHitBodyPart = 0x1220;
-   constexpr ptrdiff_t m_iHostagesKilled = 0x1224;
-   constexpr ptrdiff_t m_vecTotalBulletForce = 0x1228;
-   constexpr ptrdiff_t m_flFlashDuration = 0x1234;
-   constexpr ptrdiff_t m_flFlashMaxAlpha = 0x1238;
-   constexpr ptrdiff_t m_flProgressBarStartTime = 0x123c;
-   constexpr ptrdiff_t m_iProgressBarDuration = 0x1240;
-   constexpr ptrdiff_t m_bWaitForNoAttack = 0x1244;
-   constexpr ptrdiff_t m_flLowerBodyYawTarget = 0x1248;
-   constexpr ptrdiff_t m_bStrafing = 0x124c;
-   constexpr ptrdiff_t m_lastStandingPos = 0x1250;
-   constexpr ptrdiff_t m_ignoreLadderJumpTime = 0x125c;
+   constexpr ptrdiff_t m_fMolotovDamageTime = 0xd08;
+   constexpr ptrdiff_t m_bHasMovedSinceSpawn = 0xd0c;
+   constexpr ptrdiff_t m_bCanMoveDuringFreezePeriod = 0xd0d;
+   constexpr ptrdiff_t m_flGuardianTooFarDistFrac = 0xd10;
+   constexpr ptrdiff_t m_flNextGuardianTooFarHurtTime = 0xd14;
+   constexpr ptrdiff_t m_flDetectedByEnemySensorTime = 0xd18;
+   constexpr ptrdiff_t m_flDealtDamageToEnemyMostRecentTimestamp = 0xd1c;
+   constexpr ptrdiff_t m_flLastEquippedHelmetTime = 0xd20;
+   constexpr ptrdiff_t m_flLastEquippedArmorTime = 0xd24;
+   constexpr ptrdiff_t m_nHeavyAssaultSuitCooldownRemaining = 0xd28;
+   constexpr ptrdiff_t m_bResetArmorNextSpawn = 0xd2c;
+   constexpr ptrdiff_t m_flLastBumpMineBumpTime = 0xd30;
+   constexpr ptrdiff_t m_flEmitSoundTime = 0xd34;
+   constexpr ptrdiff_t m_iNumSpawns = 0xd38;
+   constexpr ptrdiff_t m_iShouldHaveCash = 0xd3c;
+   constexpr ptrdiff_t m_bInvalidSteamLogonDelayed = 0xd40;
+   constexpr ptrdiff_t m_flLastAction = 0xd44;
+   constexpr ptrdiff_t m_flNameChangeHistory = 0xd48;
+   constexpr ptrdiff_t m_fLastGivenDefuserTime = 0xd5c;
+   constexpr ptrdiff_t m_fLastGivenBombTime = 0xd60;
+   constexpr ptrdiff_t m_bHasNightVision = 0xd64;
+   constexpr ptrdiff_t m_bNightVisionOn = 0xd65;
+   constexpr ptrdiff_t m_fNextRadarUpdateTime = 0xd68;
+   constexpr ptrdiff_t m_flLastMoneyUpdateTime = 0xd6c;
+   constexpr ptrdiff_t m_MenuStringBuffer = 0xd70;
+   constexpr ptrdiff_t m_fIntroCamTime = 0x1170;
+   constexpr ptrdiff_t m_nMyCollisionGroup = 0x1174;
+   constexpr ptrdiff_t m_bInNoDefuseArea = 0x1178;
+   constexpr ptrdiff_t m_bKilledByTaser = 0x1179;
+   constexpr ptrdiff_t m_iMoveState = 0x117c;
+   constexpr ptrdiff_t m_grenadeParameterStashTime = 0x1180;
+   constexpr ptrdiff_t m_bGrenadeParametersStashed = 0x1184;
+   constexpr ptrdiff_t m_angStashedShootAngles = 0x1188;
+   constexpr ptrdiff_t m_vecStashedGrenadeThrowPosition = 0x1194;
+   constexpr ptrdiff_t m_vecStashedVelocity = 0x11a0;
+   constexpr ptrdiff_t m_angShootAngleHistory = 0x11ac;
+   constexpr ptrdiff_t m_vecThrowPositionHistory = 0x11c4;
+   constexpr ptrdiff_t m_vecVelocityHistory = 0x11dc;
+   constexpr ptrdiff_t m_bDiedAirborne = 0x11f4;
+   constexpr ptrdiff_t m_iBombSiteIndex = 0x11f8;
+   constexpr ptrdiff_t m_nWhichBombZone = 0x11fc;
+   constexpr ptrdiff_t m_bInBombZoneTrigger = 0x1200;
+   constexpr ptrdiff_t m_bWasInBombZoneTrigger = 0x1201;
+   constexpr ptrdiff_t m_iDirection = 0x1204;
+   constexpr ptrdiff_t m_iShotsFired = 0x1208;
+   constexpr ptrdiff_t m_ArmorValue = 0x120c;
+   constexpr ptrdiff_t m_flFlinchStack = 0x1210;
+   constexpr ptrdiff_t m_flVelocityModifier = 0x1214;
+   constexpr ptrdiff_t m_flHitHeading = 0x1218;
+   constexpr ptrdiff_t m_nHitBodyPart = 0x121c;
+   constexpr ptrdiff_t m_iHostagesKilled = 0x1220;
+   constexpr ptrdiff_t m_vecTotalBulletForce = 0x1224;
+   constexpr ptrdiff_t m_flFlashDuration = 0x1230;
+   constexpr ptrdiff_t m_flFlashMaxAlpha = 0x1234;
+   constexpr ptrdiff_t m_flProgressBarStartTime = 0x1238;
+   constexpr ptrdiff_t m_iProgressBarDuration = 0x123c;
+   constexpr ptrdiff_t m_bWaitForNoAttack = 0x1240;
+   constexpr ptrdiff_t m_flLowerBodyYawTarget = 0x1244;
+   constexpr ptrdiff_t m_bStrafing = 0x1248;
+   constexpr ptrdiff_t m_lastStandingPos = 0x124c;
+   constexpr ptrdiff_t m_ignoreLadderJumpTime = 0x1258;
    constexpr ptrdiff_t m_ladderSurpressionTimer = 0x1260;
    constexpr ptrdiff_t m_lastLadderNormal = 0x1278;
    constexpr ptrdiff_t m_lastLadderPos = 0x1284;
@@ -4736,6 +4731,7 @@ namespace CCSPlayerController_ActionTrackingServices {
    constexpr ptrdiff_t m_matchStats = 0x90;
    constexpr ptrdiff_t m_iNumRoundKills = 0x148;
    constexpr ptrdiff_t m_iNumRoundKillsHeadshots = 0x14c;
+   constexpr ptrdiff_t m_unTotalRoundDamageDealt = 0x150;
 
 }
 

@@ -562,12 +562,8 @@ class CPlayerSprayDecal:
 
 class CInferno:
 
-   m_fireXDelta: int = 1808
-   m_fireYDelta: int = 2064
-   m_fireZDelta: int = 2320
-   m_fireParentXDelta: int = 2576
-   m_fireParentYDelta: int = 2832
-   m_fireParentZDelta: int = 3088
+   m_firePositions: int = 1808
+   m_fireParentPositions: int = 2576
    m_bFireIsBurning: int = 3344
    m_BurnNormal: int = 3408
    m_fireCount: int = 4176
@@ -1987,75 +1983,75 @@ class CCSWeaponBase:
    m_flTimeSilencerSwitchComplete: int = 3412
    m_iOriginalTeamNumber: int = 3416
    m_flNextAttackRenderTimeOffset: int = 3420
-   m_bCanBePickedUp: int = 3432
-   m_bUseCanOverrideNextOwnerTouchTime: int = 3433
-   m_nextOwnerTouchTime: int = 3436
-   m_nextPrevOwnerTouchTime: int = 3440
-   m_hPrevOwner: int = 3444
-   m_nDropTick: int = 3448
-   m_donated: int = 3484
-   m_fLastShotTime: int = 3488
-   m_bWasOwnedByCT: int = 3492
-   m_bWasOwnedByTerrorist: int = 3493
-   m_bFiredOutOfAmmoEvent: int = 3494
-   m_numRemoveUnownedWeaponThink: int = 3496
-   m_IronSightController: int = 3504
-   m_iIronSightMode: int = 3528
-   m_flLastLOSTraceFailureTime: int = 3532
-   m_iNumEmptyAttacks: int = 3536
+   m_bCanBePickedUp: int = 3440
+   m_bUseCanOverrideNextOwnerTouchTime: int = 3441
+   m_nextOwnerTouchTime: int = 3444
+   m_nextPrevOwnerTouchTime: int = 3448
+   m_hPrevOwner: int = 3452
+   m_nDropTick: int = 3456
+   m_donated: int = 3492
+   m_fLastShotTime: int = 3496
+   m_bWasOwnedByCT: int = 3500
+   m_bWasOwnedByTerrorist: int = 3501
+   m_bFiredOutOfAmmoEvent: int = 3502
+   m_numRemoveUnownedWeaponThink: int = 3504
+   m_IronSightController: int = 3512
+   m_iIronSightMode: int = 3536
+   m_flLastLOSTraceFailureTime: int = 3540
+   m_iNumEmptyAttacks: int = 3544
 
 
 
 class CCSWeaponBaseGun:
 
-   m_zoomLevel: int = 3544
-   m_iBurstShotsRemaining: int = 3548
-   m_silencedModelIndex: int = 3560
-   m_inPrecache: int = 3564
-   m_bNeedsBoltAction: int = 3565
-   m_bSkillReloadAvailable: int = 3566
-   m_bSkillReloadLiftedReloadKey: int = 3567
-   m_bSkillBoltInterruptAvailable: int = 3568
-   m_bSkillBoltLiftedFireKey: int = 3569
+   m_zoomLevel: int = 3552
+   m_iBurstShotsRemaining: int = 3556
+   m_silencedModelIndex: int = 3568
+   m_inPrecache: int = 3572
+   m_bNeedsBoltAction: int = 3573
+   m_bSkillReloadAvailable: int = 3574
+   m_bSkillReloadLiftedReloadKey: int = 3575
+   m_bSkillBoltInterruptAvailable: int = 3576
+   m_bSkillBoltLiftedFireKey: int = 3577
 
 
 
 class CC4:
 
-   m_vecLastValidPlayerHeldPosition: int = 3544
-   m_vecLastValidDroppedPosition: int = 3556
-   m_bDoValidDroppedPositionCheck: int = 3568
-   m_bStartedArming: int = 3569
-   m_fArmedTime: int = 3572
-   m_bBombPlacedAnimation: int = 3576
-   m_bIsPlantingViaUse: int = 3577
-   m_entitySpottedState: int = 3584
-   m_nSpotRules: int = 3608
-   m_bPlayedArmingBeeps: int = 3612
-   m_bBombPlanted: int = 3619
-   m_bDroppedFromDeath: int = 3620
+   m_vecLastValidPlayerHeldPosition: int = 3552
+   m_vecLastValidDroppedPosition: int = 3564
+   m_bDoValidDroppedPositionCheck: int = 3576
+   m_bStartedArming: int = 3577
+   m_fArmedTime: int = 3580
+   m_bBombPlacedAnimation: int = 3584
+   m_bIsPlantingViaUse: int = 3585
+   m_entitySpottedState: int = 3592
+   m_nSpotRules: int = 3616
+   m_bPlayedArmingBeeps: int = 3620
+   m_bBombPlanted: int = 3627
+   m_bDroppedFromDeath: int = 3628
 
 
 
 class CWeaponTaser:
 
-   m_fFireTime: int = 3576
+   m_fFireTime: int = 3584
 
 
 
 class CMelee:
 
-   m_flThrowAt: int = 3544
-   m_hThrower: int = 3548
-   m_bDidThrowDamage: int = 3552
+   m_flThrowAt: int = 3552
+   m_hThrower: int = 3556
+   m_bDidThrowDamage: int = 3560
 
 
 
 class CWeaponShield:
 
-   m_flBulletDamageAbsorbed: int = 3576
-   m_flLastBulletHitSoundTime: int = 3580
-   m_flDisplayHealth: int = 3584
+   m_flBulletDamageAbsorbed: int = 3584
+   m_flLastBulletHitSoundTime: int = 3588
+   m_flDisplayHealth: int = 3592
 
 
 
@@ -2091,34 +2087,34 @@ class CSmokeGrenadeProjectile:
 
 class CBaseCSGrenade:
 
-   m_bRedraw: int = 3576
-   m_bIsHeldByPlayer: int = 3577
-   m_bPinPulled: int = 3578
-   m_bJumpThrow: int = 3579
-   m_eThrowStatus: int = 3580
-   m_fThrowTime: int = 3584
-   m_flThrowStrength: int = 3588
-   m_flThrowStrengthApproach: int = 3592
-   m_fDropTime: int = 3596
+   m_bRedraw: int = 3584
+   m_bIsHeldByPlayer: int = 3585
+   m_bPinPulled: int = 3586
+   m_bJumpThrow: int = 3587
+   m_eThrowStatus: int = 3588
+   m_fThrowTime: int = 3592
+   m_flThrowStrength: int = 3596
+   m_flThrowStrengthApproach: int = 3600
+   m_fDropTime: int = 3604
 
 
 
 class CWeaponBaseItem:
 
-   m_SequenceCompleteTimer: int = 3544
-   m_bRedraw: int = 3568
+   m_SequenceCompleteTimer: int = 3552
+   m_bRedraw: int = 3576
 
 
 
 class CFists:
 
-   m_bPlayingUninterruptableAct: int = 3544
-   m_nUninterruptableActivity: int = 3548
-   m_bRestorePrevWep: int = 3552
-   m_hWeaponBeforePrevious: int = 3556
-   m_hWeaponPrevious: int = 3560
-   m_bDelayedHardPunchIncoming: int = 3564
-   m_bDestroyAfterTaunt: int = 3565
+   m_bPlayingUninterruptableAct: int = 3552
+   m_nUninterruptableActivity: int = 3556
+   m_bRestorePrevWep: int = 3560
+   m_hWeaponBeforePrevious: int = 3564
+   m_hWeaponPrevious: int = 3568
+   m_bDelayedHardPunchIncoming: int = 3572
+   m_bDestroyAfterTaunt: int = 3573
 
 
 
@@ -2153,68 +2149,67 @@ class CCSPlayerPawnBase:
    m_iBlockingUseActionInProgress: int = 3324
    m_fImmuneToGunGameDamageTime: int = 3328
    m_bGunGameImmunity: int = 3332
-   m_unTotalRoundDamageDealt: int = 3336
-   m_fMolotovDamageTime: int = 3340
-   m_bHasMovedSinceSpawn: int = 3344
-   m_bCanMoveDuringFreezePeriod: int = 3345
-   m_flGuardianTooFarDistFrac: int = 3348
-   m_flNextGuardianTooFarHurtTime: int = 3352
-   m_flDetectedByEnemySensorTime: int = 3356
-   m_flDealtDamageToEnemyMostRecentTimestamp: int = 3360
-   m_flLastEquippedHelmetTime: int = 3364
-   m_flLastEquippedArmorTime: int = 3368
-   m_nHeavyAssaultSuitCooldownRemaining: int = 3372
-   m_bResetArmorNextSpawn: int = 3376
-   m_flLastBumpMineBumpTime: int = 3380
-   m_flEmitSoundTime: int = 3384
-   m_iNumSpawns: int = 3388
-   m_iShouldHaveCash: int = 3392
-   m_bInvalidSteamLogonDelayed: int = 3396
-   m_flLastAction: int = 3400
-   m_flNameChangeHistory: int = 3404
-   m_fLastGivenDefuserTime: int = 3424
-   m_fLastGivenBombTime: int = 3428
-   m_bHasNightVision: int = 3432
-   m_bNightVisionOn: int = 3433
-   m_fNextRadarUpdateTime: int = 3436
-   m_flLastMoneyUpdateTime: int = 3440
-   m_MenuStringBuffer: int = 3444
-   m_fIntroCamTime: int = 4468
-   m_nMyCollisionGroup: int = 4472
-   m_bInNoDefuseArea: int = 4476
-   m_bKilledByTaser: int = 4477
-   m_iMoveState: int = 4480
-   m_grenadeParameterStashTime: int = 4484
-   m_bGrenadeParametersStashed: int = 4488
-   m_angStashedShootAngles: int = 4492
-   m_vecStashedGrenadeThrowPosition: int = 4504
-   m_vecStashedVelocity: int = 4516
-   m_angShootAngleHistory: int = 4528
-   m_vecThrowPositionHistory: int = 4552
-   m_vecVelocityHistory: int = 4576
-   m_bDiedAirborne: int = 4600
-   m_iBombSiteIndex: int = 4604
-   m_nWhichBombZone: int = 4608
-   m_bInBombZoneTrigger: int = 4612
-   m_bWasInBombZoneTrigger: int = 4613
-   m_iDirection: int = 4616
-   m_iShotsFired: int = 4620
-   m_ArmorValue: int = 4624
-   m_flFlinchStack: int = 4628
-   m_flVelocityModifier: int = 4632
-   m_flHitHeading: int = 4636
-   m_nHitBodyPart: int = 4640
-   m_iHostagesKilled: int = 4644
-   m_vecTotalBulletForce: int = 4648
-   m_flFlashDuration: int = 4660
-   m_flFlashMaxAlpha: int = 4664
-   m_flProgressBarStartTime: int = 4668
-   m_iProgressBarDuration: int = 4672
-   m_bWaitForNoAttack: int = 4676
-   m_flLowerBodyYawTarget: int = 4680
-   m_bStrafing: int = 4684
-   m_lastStandingPos: int = 4688
-   m_ignoreLadderJumpTime: int = 4700
+   m_fMolotovDamageTime: int = 3336
+   m_bHasMovedSinceSpawn: int = 3340
+   m_bCanMoveDuringFreezePeriod: int = 3341
+   m_flGuardianTooFarDistFrac: int = 3344
+   m_flNextGuardianTooFarHurtTime: int = 3348
+   m_flDetectedByEnemySensorTime: int = 3352
+   m_flDealtDamageToEnemyMostRecentTimestamp: int = 3356
+   m_flLastEquippedHelmetTime: int = 3360
+   m_flLastEquippedArmorTime: int = 3364
+   m_nHeavyAssaultSuitCooldownRemaining: int = 3368
+   m_bResetArmorNextSpawn: int = 3372
+   m_flLastBumpMineBumpTime: int = 3376
+   m_flEmitSoundTime: int = 3380
+   m_iNumSpawns: int = 3384
+   m_iShouldHaveCash: int = 3388
+   m_bInvalidSteamLogonDelayed: int = 3392
+   m_flLastAction: int = 3396
+   m_flNameChangeHistory: int = 3400
+   m_fLastGivenDefuserTime: int = 3420
+   m_fLastGivenBombTime: int = 3424
+   m_bHasNightVision: int = 3428
+   m_bNightVisionOn: int = 3429
+   m_fNextRadarUpdateTime: int = 3432
+   m_flLastMoneyUpdateTime: int = 3436
+   m_MenuStringBuffer: int = 3440
+   m_fIntroCamTime: int = 4464
+   m_nMyCollisionGroup: int = 4468
+   m_bInNoDefuseArea: int = 4472
+   m_bKilledByTaser: int = 4473
+   m_iMoveState: int = 4476
+   m_grenadeParameterStashTime: int = 4480
+   m_bGrenadeParametersStashed: int = 4484
+   m_angStashedShootAngles: int = 4488
+   m_vecStashedGrenadeThrowPosition: int = 4500
+   m_vecStashedVelocity: int = 4512
+   m_angShootAngleHistory: int = 4524
+   m_vecThrowPositionHistory: int = 4548
+   m_vecVelocityHistory: int = 4572
+   m_bDiedAirborne: int = 4596
+   m_iBombSiteIndex: int = 4600
+   m_nWhichBombZone: int = 4604
+   m_bInBombZoneTrigger: int = 4608
+   m_bWasInBombZoneTrigger: int = 4609
+   m_iDirection: int = 4612
+   m_iShotsFired: int = 4616
+   m_ArmorValue: int = 4620
+   m_flFlinchStack: int = 4624
+   m_flVelocityModifier: int = 4628
+   m_flHitHeading: int = 4632
+   m_nHitBodyPart: int = 4636
+   m_iHostagesKilled: int = 4640
+   m_vecTotalBulletForce: int = 4644
+   m_flFlashDuration: int = 4656
+   m_flFlashMaxAlpha: int = 4660
+   m_flProgressBarStartTime: int = 4664
+   m_iProgressBarDuration: int = 4668
+   m_bWaitForNoAttack: int = 4672
+   m_flLowerBodyYawTarget: int = 4676
+   m_bStrafing: int = 4680
+   m_lastStandingPos: int = 4684
+   m_ignoreLadderJumpTime: int = 4696
    m_ladderSurpressionTimer: int = 4704
    m_lastLadderNormal: int = 4728
    m_lastLadderPos: int = 4740
@@ -4734,6 +4729,7 @@ class CCSPlayerController_ActionTrackingServices:
    m_matchStats: int = 144
    m_iNumRoundKills: int = 328
    m_iNumRoundKillsHeadshots: int = 332
+   m_unTotalRoundDamageDealt: int = 336
 
 
 
