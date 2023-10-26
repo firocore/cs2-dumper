@@ -8,7 +8,7 @@ from schemas.schema_fields import Field
 def dump_offsets(memory: Memory):
     
 
-    with open("../signatures.json", "r") as file:
+    with open("signatures.json", "r") as file:
         config: dict = json.load(file)
         file.close()
 

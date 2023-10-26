@@ -1,0 +1,147 @@
+{
+    "EngineLoopState_t": {
+        "m_nPlatWindowWidth": 24,
+        "m_nPlatWindowHeight": 28,
+        "m_nRenderWidth": 32,
+        "m_nRenderHeight": 36
+    },
+    "EventFrameBoundary_t": {
+        "m_flFrameTime": 0
+    },
+    "EventProfileStorageAvailable_t": {
+        "m_nSplitScreenSlot": 0
+    },
+    "EventSetTime_t": {
+        "m_LoopState": 0,
+        "m_nClientOutputFrames": 40,
+        "m_flRealTime": 48,
+        "m_flRenderTime": 56,
+        "m_flRenderFrameTime": 64,
+        "m_flRenderFrameTimeUnbounded": 72,
+        "m_flRenderFrameTimeUnscaled": 80,
+        "m_flTickRemainder": 88
+    },
+    "EventClientPollInput_t": {
+        "m_LoopState": 0,
+        "m_flRealTime": 40
+    },
+    "EventClientProcessInput_t": {
+        "m_LoopState": 0,
+        "m_flRealTime": 40
+    },
+    "EventClientProcessGameInput_t": {
+        "m_LoopState": 0,
+        "m_flRealTime": 40,
+        "m_flFrameTime": 44
+    },
+    "EventClientPreOutput_t": {
+        "m_LoopState": 0,
+        "m_flRenderTime": 40,
+        "m_flRenderFrameTime": 48,
+        "m_flRenderFrameTimeUnbounded": 56,
+        "m_flRealTime": 64,
+        "m_bRenderOnly": 68
+    },
+    "EventClientSceneSystemThreadStateChange_t": {
+        "m_bThreadsActive": 0
+    },
+    "EventClientOutput_t": {
+        "m_LoopState": 0,
+        "m_flRenderTime": 40,
+        "m_flRealTime": 44,
+        "m_flRenderFrameTimeUnbounded": 48,
+        "m_bRenderOnly": 52
+    },
+    "EventClientPostOutput_t": {
+        "m_LoopState": 0,
+        "m_flRenderTime": 40,
+        "m_flRenderFrameTime": 48,
+        "m_flRenderFrameTimeUnbounded": 52,
+        "m_bRenderOnly": 56
+    },
+    "EventClientFrameSimulate_t": {
+        "m_LoopState": 0,
+        "m_flRealTime": 40,
+        "m_flFrameTime": 44
+    },
+    "EventSimpleLoopFrameUpdate_t": {
+        "m_LoopState": 0,
+        "m_flRealTime": 40,
+        "m_flFrameTime": 44
+    },
+    "EventSimulate_t": {
+        "m_LoopState": 0,
+        "m_bFirstTick": 40,
+        "m_bLastTick": 41
+    },
+    "EventAdvanceTick_t": {
+        "m_nCurrentTick": 48,
+        "m_nCurrentTickThisFrame": 52,
+        "m_nTotalTicksThisFrame": 56,
+        "m_nTotalTicks": 60
+    },
+    "EventPostAdvanceTick_t": {
+        "m_nCurrentTick": 48,
+        "m_nCurrentTickThisFrame": 52,
+        "m_nTotalTicksThisFrame": 56,
+        "m_nTotalTicks": 60
+    },
+    "EventClientSendInput_t": {
+        "m_bFinalClientCommandTick": 0,
+        "m_nAdditionalClientCommandsToCreate": 4
+    },
+    "EventClientPollNetworking_t": {
+        "m_nTickCount": 0
+    },
+    "EventPostDataUpdate_t": {
+        "m_nCount": 0
+    },
+    "EventPreDataUpdate_t": {
+        "m_nCount": 0
+    },
+    "EventAppShutdown_t": {
+        "m_nDummy0": 0
+    },
+    "CNetworkVarChainer": {
+        "m_PathIndex": 32
+    },
+    "EntComponentInfo_t": {
+        "m_pName": 0,
+        "m_pCPPClassname": 8,
+        "m_pNetworkDataReferencedDescription": 16,
+        "m_pNetworkDataReferencedPtrPropDescription": 24,
+        "m_nRuntimeIndex": 32,
+        "m_nFlags": 36,
+        "m_pBaseClassComponentHelper": 96
+    },
+    "CEntityComponentHelper": {
+        "m_flags": 8,
+        "m_pInfo": 16,
+        "m_nPriority": 24,
+        "m_pNext": 32
+    },
+    "CEntityIdentity": {
+        "m_nameStringableIndex": 20,
+        "m_name": 24,
+        "m_designerName": 32,
+        "m_flags": 48,
+        "m_worldGroupId": 56,
+        "m_fDataObjectTypes": 60,
+        "m_PathIndex": 64,
+        "m_pPrev": 88,
+        "m_pNext": 96,
+        "m_pPrevByClass": 104,
+        "m_pNextByClass": 112
+    },
+    "CEntityInstance": {
+        "m_iszPrivateVScripts": 8,
+        "m_pEntity": 16,
+        "m_CScriptComponent": 40
+    },
+    "CEntityIOOutput": {
+        "m_Value": 24
+    },
+    "CScriptComponent": {
+        "m_scriptClassName": 48
+    }
+}

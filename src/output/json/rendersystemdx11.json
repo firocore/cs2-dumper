@@ -1,0 +1,20 @@
+{
+    "RenderInputLayoutField_t": {
+        "m_pSemanticName": 0,
+        "m_nSemanticIndex": 32,
+        "m_Format": 36,
+        "m_nOffset": 40,
+        "m_nSlot": 44,
+        "m_nSlotType": 48,
+        "m_nInstanceStepRate": 52
+    },
+    "VsInputSignatureElement_t": {
+        "m_pName": 0,
+        "m_pSemantic": 64,
+        "m_pD3DSemanticName": 128,
+        "m_nD3DSemanticIndex": 192
+    },
+    "VsInputSignature_t": {
+        "m_elems": 0
+    }
+}

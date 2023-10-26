@@ -1,0 +1,63 @@
+{
+    "TestResource_t": {
+        "m_name": 0
+    },
+    "ManifestTestResource_t": {
+        "m_name": 0,
+        "m_child": 8
+    },
+    "FuseVariableIndex_t": {
+        "m_Value": 0
+    },
+    "FuseFunctionIndex_t": {
+        "m_Value": 0
+    },
+    "ConstantInfo_t": {
+        "m_name": 0,
+        "m_nameToken": 8,
+        "m_flValue": 12
+    },
+    "VariableInfo_t": {
+        "m_name": 0,
+        "m_nameToken": 8,
+        "m_nIndex": 12,
+        "m_nNumComponents": 14,
+        "m_eVarType": 15,
+        "m_eAccess": 16
+    },
+    "FunctionInfo_t": {
+        "m_name": 8,
+        "m_nameToken": 16,
+        "m_nParamCount": 20,
+        "m_nIndex": 24,
+        "m_bIsPure": 26
+    },
+    "CFuseProgram": {
+        "m_programBuffer": 0,
+        "m_variablesRead": 24,
+        "m_variablesWritten": 48,
+        "m_nMaxTempVarsUsed": 72
+    },
+    "CFuseSymbolTable": {
+        "m_constants": 0,
+        "m_variables": 24,
+        "m_functions": 48,
+        "m_constantMap": 72,
+        "m_variableMap": 104,
+        "m_functionMap": 136
+    },
+    "AABB_t": {
+        "m_vMinBounds": 0,
+        "m_vMaxBounds": 12
+    },
+    "PackedAABB_t": {
+        "m_nPackedMin": 0,
+        "m_nPackedMax": 4
+    },
+    "FourQuaternions": {
+        "x": 0,
+        "y": 16,
+        "z": 32,
+        "w": 48
+    }
+}
